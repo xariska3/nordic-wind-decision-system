@@ -1,0 +1,27 @@
+{
+"project_name": "Nordic Wind Decision System",
+"project_root": "C:/Users/chka24ac/Nordic Wind Decision System",
+"legacy_project_root": "C:/Users/chka24ac/Energy Trading",
+"legacy_data_root": "C:/Users/chka24ac/Energy Trading/data",
+"data_root": "C:/Users/chka24ac/Nordic Wind Decision System/data",
+"output_root": "C:/Users/chka24ac/Nordic Wind Decision System/outputs",
+
+"timezone": "Europe/Copenhagen",
+"price_areas": [
+"DK1",
+"DK2"
+],
+
+"model_family": "lightgbm",
+"random_seed": 42,
+
+"strict_information_time": true,
+"require_exact_weather_vintages": true,
+"allow_unverified_realtime_generation_features": false,
+
+"day_ahead_gate_local_time": "12:00",
+"forecast_decision_local_time": "11:00",
+
+"primary_frequency": "15min",
+"fallback_frequency": "1h"
+}
