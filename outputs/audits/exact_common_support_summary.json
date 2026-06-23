@@ -1,0 +1,41 @@
+{
+  "requested_days": 278,
+  "dates_with_any_provider": 223,
+  "core_common_days": 218,
+  "seven_source_common_days": 197,
+  "selected_sources": [
+    "gfs",
+    "icon_eu",
+    "ecmwf",
+    "dmi",
+    "arpege_europe",
+    "ukmo_global",
+    "cma_grapes"
+  ],
+  "primary_wind_height_by_model": {
+    "gfs": "100m",
+    "icon_eu": "100m",
+    "ecmwf": "100m",
+    "dmi": "100m",
+    "arpege_europe": "100m",
+    "ukmo_global": "10m",
+    "cma_grapes": "100m"
+  },
+  "all_available_area_rows": 72870,
+  "seven_source_common_area_rows": 66206,
+  "all_available_model_rows": 10704,
+  "seven_source_common_model_rows": 9458,
+  "dst_safe_expected_model_rows": 9458,
+  "non_24_hour_area_dates": [
+    {
+      "price_area": "DK1",
+      "local_date": "2025-10-26",
+      "observed_hours": 25
+    },
+    {
+      "price_area": "DK2",
+      "local_date": "2025-10-26",
+      "observed_hours": 25
+    }
+  ]
+}

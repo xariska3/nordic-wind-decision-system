@@ -1,0 +1,11 @@
+{
+  "total_rows": 3,
+  "available_rows": 2,
+  "violation_rows": 1,
+  "availability_rate": 0.6666666666666666,
+  "missing_event_time": 0,
+  "missing_publication_time": 0,
+  "missing_decision_time": 0,
+  "publication_after_decision": 1,
+  "decision_not_before_event": 0
+}

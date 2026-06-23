@@ -48,3 +48,10 @@ token.txt
 
 # Logs
 *.log
+# Verbose generated audit outputs
+outputs/audits/exact_run_manifest_candidates.csv
+outputs/audits/exact_run_download_errors.csv
+outputs/audits/notebook_01_verification.json
+.env.*
+outputs/figures/notebook_01_dk1_weather.png
+outputs/figures/notebook_01_dk2_weather.png

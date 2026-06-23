@@ -1,0 +1,13 @@
+{
+  "name": "example_wind_features",
+  "event_time_column": "target_time",
+  "publication_time_column": "publication_time",
+  "decision_time_column": "decision_time",
+  "required_columns": [
+    "price_area"
+  ],
+  "entity_columns": [
+    "price_area"
+  ],
+  "target_column": "wind_generation_mw"
+}

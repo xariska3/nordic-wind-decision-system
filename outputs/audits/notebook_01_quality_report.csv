@@ -1,0 +1,14 @@
+check,status,value,threshold,severity,notes
+actual wind row count,PASS,33648,33648,BLOCKING,
+actual wind duplicate rate,PASS,0.0,0,BLOCKING,
+day-ahead price coverage,PASS,1.0,>= 99%,BLOCKING,
+required D2 weather sources,PASS,[],no failed core source,BLOCKING,
+selected weather source count,PASS,5,>= 3,BLOCKING,
+homogeneous common-panel retention,PASS,1.0,>= 98.0%,BLOCKING,
+main panel non-empty,PASS,33648,non-empty,BLOCKING,
+imbalance price coverage,PASS,0.9990489776509748,>= 95%,WARNING,
+Energinet benchmark parsed,PASS,33216,non-empty,WARNING,Publication and revision timing remains a benchmark caveat.
+exact-run information-time safety,PASS,1.0,1.0,BLOCKING,
+exact target row count,PASS,13344,13344,BLOCKING,
+exact robustness source count,PASS,7,>= 3,BLOCKING,
+exact model panel non-empty,PASS,9458,non-empty,BLOCKING,

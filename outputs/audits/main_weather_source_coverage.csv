@@ -1,0 +1,11 @@
+model_alias,api_model,provider,required,coverage_wind_100m,coverage_wind_10m,selected_wind_height,primary_wind_coverage,selection_threshold,selected
+gfs,gfs_global,NOAA,True,1.0,1.0,100m,1.0,0.99,True
+icon_eu,icon_eu,DWD,True,1.0,1.0,100m,1.0,0.99,True
+ecmwf,ecmwf_ifs025,ECMWF,True,1.0,1.0,100m,1.0,0.99,True
+dmi,dmi_harmonie_arome_europe,DMI,False,0.0,0.0,,0.0,0.995,False
+arpege_europe,meteofrance_arpege_europe,Météo-France,False,0.0,0.0,,0.0,0.995,False
+ukmo_global,ukmo_global_deterministic_10km,UK Met Office,False,0.0,0.9528055159296244,,0.9528055159296244,0.995,False
+gem_global,gem_global,Environment Canada,False,0.0,1.0,10m,1.0,0.995,True
+jma_gsm,jma_gsm,JMA,False,0.0,1.0,10m,1.0,0.995,True
+cma_grapes,cma_grapes_global,CMA,False,0.0,0.8921184022824536,,0.8921184022824536,0.995,False
+bom_access,bom_access_global,BOM,False,0.0,0.5219923918212078,,0.5219923918212078,0.995,False
