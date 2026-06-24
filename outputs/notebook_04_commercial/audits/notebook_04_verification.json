@@ -1,0 +1,394 @@
+{
+  "verification_status": "COMMERCIAL_EVALUATION_COMPLETE",
+  "blocking_failures": [],
+  "input_manifest": {
+    "notebook_03_status": "PROBABILISTIC_MODELLING_COMPLETE",
+    "raw_scenario_path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_03_probabilistic\\scenarios\\notebook_03_joint_wind_scenarios.parquet",
+    "raw_scenario_sha256": "14054a06a0ff46f2b0d30f5c911c241f4546f8e3130c0ea9c10411c5e679f84a",
+    "gated_scenario_path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_03_probabilistic\\scenarios\\notebook_03_joint_wind_scenarios_gated_recalibrated.parquet",
+    "gated_scenario_sha256": "2b1c3368aba324afc412edcb544cb647207ed07cb2c983bb78318593713a0313",
+    "scenario_rows": 5327000,
+    "scenario_count_per_timestamp": 250
+  },
+  "evaluation_window": {
+    "market_history_start_utc": "2025-06-04 00:00:00+00:00",
+    "evaluation_start_utc": "2025-12-01 00:00:00+00:00",
+    "evaluation_end_utc_exclusive": "2026-06-01 00:00:00+00:00"
+  },
+  "commercial_specification": {
+    "portfolio_share": 1.0,
+    "settlement_model": "Nordic single imbalance price",
+    "hourly_energy_to_quarter_price_assumption": "net hourly deviation multiplied by mean quarter-hour spread",
+    "nomination_methods": [
+      "online_profit_quantile",
+      "online_risk_adjusted_quantile",
+      "point_centre",
+      "scenario_median",
+      "scenario_q25",
+      "scenario_q75",
+      "spread_signal_quantile"
+    ],
+    "scenario_streams": [
+      "raw",
+      "gated"
+    ]
+  },
+  "strict_audit": {
+    "scenario_count_per_timestamp": 250,
+    "quarter_key_duplicates": 0,
+    "incomplete_market_hours": 0,
+    "missing_market_rows": 0,
+    "market_signal_lookahead_violations": 0,
+    "online_policy_lookahead_violations": 0,
+    "maximum_revenue_identity_error": 4.656612873077393e-10,
+    "common_support_mismatches": 0
+  },
+  "commercial_shortlist": [
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 1,
+      "nomination_method": "online_profit_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -13842743.044491,
+      "incremental_eur_per_actual_mwh": -1.64644,
+      "total_absolute_imbalance_mwh": 2524163.663772,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 2,
+      "nomination_method": "online_risk_adjusted_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -15505514.668124,
+      "incremental_eur_per_actual_mwh": -1.844208,
+      "total_absolute_imbalance_mwh": 2122317.553635,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 3,
+      "nomination_method": "scenario_q75",
+      "total_incremental_revenue_vs_perfect_eur": -19925917.175866,
+      "incremental_eur_per_actual_mwh": -2.369966,
+      "total_absolute_imbalance_mwh": 1916561.349255,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 1,
+      "nomination_method": "online_profit_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -12222743.963525,
+      "incremental_eur_per_actual_mwh": -1.453759,
+      "total_absolute_imbalance_mwh": 2314868.4187,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 2,
+      "nomination_method": "online_risk_adjusted_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -14369077.404817,
+      "incremental_eur_per_actual_mwh": -1.709042,
+      "total_absolute_imbalance_mwh": 1995888.346606,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 3,
+      "nomination_method": "scenario_q75",
+      "total_incremental_revenue_vs_perfect_eur": -19664977.556416,
+      "incremental_eur_per_actual_mwh": -2.33893,
+      "total_absolute_imbalance_mwh": 1858290.209815,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 1,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -15084847.417886,
+      "incremental_eur_per_actual_mwh": -5.709863,
+      "total_absolute_imbalance_mwh": 650120.529192,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 2,
+      "nomination_method": "point_centre",
+      "total_incremental_revenue_vs_perfect_eur": -15439202.210534,
+      "incremental_eur_per_actual_mwh": -5.843992,
+      "total_absolute_imbalance_mwh": 570309.244726,
+      "inference_note": "reference point nomination"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 3,
+      "nomination_method": "spread_signal_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -15772940.427106,
+      "incremental_eur_per_actual_mwh": -5.970317,
+      "total_absolute_imbalance_mwh": 618812.070454,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 1,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -15335024.781553,
+      "incremental_eur_per_actual_mwh": -5.804559,
+      "total_absolute_imbalance_mwh": 630715.331627,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 2,
+      "nomination_method": "point_centre",
+      "total_incremental_revenue_vs_perfect_eur": -15439202.210534,
+      "incremental_eur_per_actual_mwh": -5.843992,
+      "total_absolute_imbalance_mwh": 570309.244726,
+      "inference_note": "reference point nomination"
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 3,
+      "nomination_method": "spread_signal_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -16093833.145773,
+      "incremental_eur_per_actual_mwh": -6.091781,
+      "total_absolute_imbalance_mwh": 606455.082832,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 1,
+      "nomination_method": "point_centre",
+      "total_incremental_revenue_vs_perfect_eur": -3865974.920431,
+      "incremental_eur_per_actual_mwh": -3.503569,
+      "total_absolute_imbalance_mwh": 265982.325729,
+      "inference_note": "reference point nomination"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 2,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -4111157.63596,
+      "incremental_eur_per_actual_mwh": -3.725768,
+      "total_absolute_imbalance_mwh": 341911.880975,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "gated",
+      "commercial_rank": 3,
+      "nomination_method": "online_profit_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -4335968.720533,
+      "incremental_eur_per_actual_mwh": -3.929504,
+      "total_absolute_imbalance_mwh": 376472.261153,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 1,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -3676186.12607,
+      "incremental_eur_per_actual_mwh": -3.331571,
+      "total_absolute_imbalance_mwh": 340490.834801,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 2,
+      "nomination_method": "scenario_median",
+      "total_incremental_revenue_vs_perfect_eur": -3760386.615884,
+      "incremental_eur_per_actual_mwh": -3.407879,
+      "total_absolute_imbalance_mwh": 272226.695035,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "scenario_stream": "raw",
+      "commercial_rank": 3,
+      "nomination_method": "scenario_q75",
+      "total_incremental_revenue_vs_perfect_eur": -3848823.761493,
+      "incremental_eur_per_actual_mwh": -3.488026,
+      "total_absolute_imbalance_mwh": 283518.01125,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 1,
+      "nomination_method": "online_profit_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -2526042.125996,
+      "incremental_eur_per_actual_mwh": -8.180179,
+      "total_absolute_imbalance_mwh": 151735.576246,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 2,
+      "nomination_method": "online_risk_adjusted_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -2851934.011145,
+      "incremental_eur_per_actual_mwh": -9.235527,
+      "total_absolute_imbalance_mwh": 142677.276421,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "gated",
+      "commercial_rank": 3,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -2893171.657962,
+      "incremental_eur_per_actual_mwh": -9.369068,
+      "total_absolute_imbalance_mwh": 123774.348924,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 1,
+      "nomination_method": "online_profit_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -2526042.125996,
+      "incremental_eur_per_actual_mwh": -8.180179,
+      "total_absolute_imbalance_mwh": 151735.576246,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 2,
+      "nomination_method": "online_risk_adjusted_quantile",
+      "total_incremental_revenue_vs_perfect_eur": -2851934.011145,
+      "incremental_eur_per_actual_mwh": -9.235527,
+      "total_absolute_imbalance_mwh": 142677.276421,
+      "inference_note": "commercial ranking is exploratory"
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "scenario_stream": "raw",
+      "commercial_rank": 3,
+      "nomination_method": "scenario_q25",
+      "total_incremental_revenue_vs_perfect_eur": -2893171.657962,
+      "incremental_eur_per_actual_mwh": -9.369068,
+      "total_absolute_imbalance_mwh": 123774.348924,
+      "inference_note": "commercial ranking is exploratory"
+    }
+  ],
+  "saved_files": [
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\market\\market_prices_quarter_hour.parquet",
+      "exists": true,
+      "size_mb": 1.258
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\market\\market_prices_hourly.parquet",
+      "exists": true,
+      "size_mb": 0.917
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\nominations\\notebook_04_nominations_hourly.parquet",
+      "exists": true,
+      "size_mb": 3.935
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\nominations\\candidate_quantile_daily_utility.parquet",
+      "exists": true,
+      "size_mb": 0.274
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\settlement\\notebook_04_settlement_hourly.parquet",
+      "exists": true,
+      "size_mb": 14.092
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_commercial_summary.csv",
+      "exists": true,
+      "size_mb": 0.021
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_commercial_summary_by_fold.csv",
+      "exists": true,
+      "size_mb": 0.031
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_comparison_vs_point.csv",
+      "exists": true,
+      "size_mb": 0.005
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_inference_vs_point.csv",
+      "exists": true,
+      "size_mb": 0.01
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_raw_vs_gated_summary.csv",
+      "exists": true,
+      "size_mb": 0.003
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_denmark_portfolio_summary.csv",
+      "exists": true,
+      "size_mb": 0.004
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_fee_and_spread_sensitivity.csv",
+      "exists": true,
+      "size_mb": 0.105
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\tables\\notebook_04_commercial_shortlist.csv",
+      "exists": true,
+      "size_mb": 0.012
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\audits\\market_api_request_log.csv",
+      "exists": true,
+      "size_mb": 0.006
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\audits\\market_price_coverage.csv",
+      "exists": true,
+      "size_mb": 0.315
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_04_commercial\\audits\\online_quantile_decisions.csv",
+      "exists": true,
+      "size_mb": 0.074
+    }
+  ]
+}

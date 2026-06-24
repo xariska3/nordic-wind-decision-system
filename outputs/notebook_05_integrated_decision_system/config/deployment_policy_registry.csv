@@ -1,0 +1,13 @@
+panel,price_area,operating_mode,scenario_stream,nomination_method,policy_role,evidence_status,live_enabled,pilot_enabled
+d2,DK1,conservative,raw,point_centre,production_benchmark,reference,True,False
+d2,DK2,conservative,raw,point_centre,production_benchmark,reference,True,False
+exact,DK1,conservative,raw,point_centre,shadow_benchmark,reference,False,False
+exact,DK2,conservative,raw,point_centre,shadow_benchmark,reference,False,False
+d2,DK1,balanced,raw,online_risk_adjusted_quantile,controlled_pilot_candidate,pilot_eligible,False,True
+d2,DK2,balanced,raw,point_centre,production_benchmark,reference,True,False
+exact,DK1,balanced,raw,point_centre,shadow_benchmark,reference,False,False
+exact,DK2,balanced,raw,scenario_q25,shadow_candidate,shadow_only,False,False
+d2,DK1,profit_seeking,raw,online_profit_quantile,limited_pilot_candidate,pilot_eligible,False,True
+d2,DK2,profit_seeking,gated,scenario_q25,challenger,challenger_only,False,False
+exact,DK1,profit_seeking,raw,scenario_q25,shadow_candidate,shadow_only,False,False
+exact,DK2,profit_seeking,raw,online_profit_quantile,shadow_candidate,shadow_only,False,False

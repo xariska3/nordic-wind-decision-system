@@ -1,0 +1,221 @@
+{
+  "system_name": "Nordic Wind Decision System",
+  "version": "1.0",
+  "default_live_mode": "conservative",
+  "recommended_d2_pilot_mode": "balanced",
+  "exact_track_live_status": "shadow_only_until_second_probabilistic_commercial_fold",
+  "policy_registry": [
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "operating_mode": "balanced",
+      "scenario_stream": "raw",
+      "nomination_method": "online_risk_adjusted_quantile",
+      "policy_role": "controlled_pilot_candidate",
+      "evidence_status": "pilot_eligible",
+      "live_enabled": false,
+      "pilot_enabled": true
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "operating_mode": "balanced",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "production_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": true,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "operating_mode": "conservative",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "production_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": true,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "operating_mode": "conservative",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "production_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": true,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK1",
+      "operating_mode": "profit_seeking",
+      "scenario_stream": "raw",
+      "nomination_method": "online_profit_quantile",
+      "policy_role": "limited_pilot_candidate",
+      "evidence_status": "pilot_eligible",
+      "live_enabled": false,
+      "pilot_enabled": true
+    },
+    {
+      "panel": "d2",
+      "price_area": "DK2",
+      "operating_mode": "profit_seeking",
+      "scenario_stream": "gated",
+      "nomination_method": "scenario_q25",
+      "policy_role": "challenger",
+      "evidence_status": "challenger_only",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "operating_mode": "balanced",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "shadow_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "operating_mode": "balanced",
+      "scenario_stream": "raw",
+      "nomination_method": "scenario_q25",
+      "policy_role": "shadow_candidate",
+      "evidence_status": "shadow_only",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "operating_mode": "conservative",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "shadow_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "operating_mode": "conservative",
+      "scenario_stream": "raw",
+      "nomination_method": "point_centre",
+      "policy_role": "shadow_benchmark",
+      "evidence_status": "reference",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK1",
+      "operating_mode": "profit_seeking",
+      "scenario_stream": "raw",
+      "nomination_method": "scenario_q25",
+      "policy_role": "shadow_candidate",
+      "evidence_status": "shadow_only",
+      "live_enabled": false,
+      "pilot_enabled": false
+    },
+    {
+      "panel": "exact",
+      "price_area": "DK2",
+      "operating_mode": "profit_seeking",
+      "scenario_stream": "raw",
+      "nomination_method": "online_profit_quantile",
+      "policy_role": "shadow_candidate",
+      "evidence_status": "shadow_only",
+      "live_enabled": false,
+      "pilot_enabled": false
+    }
+  ],
+  "monitoring_rules": [
+    {
+      "rule_id": "market_data_completeness",
+      "metric": "rolling_7d_complete_market_hour_share",
+      "comparison": ">=",
+      "threshold": 0.99,
+      "action_on_failure": "fallback_to_point_and_alert",
+      "severity": "critical"
+    },
+    {
+      "rule_id": "commercial_delta",
+      "metric": "rolling_28d_commercial_delta_vs_point_eur_per_mwh",
+      "comparison": ">=",
+      "threshold": 0.0,
+      "action_on_failure": "fallback_to_point_and_review",
+      "severity": "critical"
+    },
+    {
+      "rule_id": "imbalance_increase",
+      "metric": "rolling_28d_absolute_imbalance_increase_vs_point_pct",
+      "comparison": "<=",
+      "threshold": 50.0,
+      "action_on_failure": "reduce_risk_mode_or_fallback",
+      "severity": "high"
+    },
+    {
+      "rule_id": "selected_quantile_lower_bound",
+      "metric": "selected_nomination_quantile",
+      "comparison": ">=",
+      "threshold": 0.1,
+      "action_on_failure": "clip_or_fallback_to_point",
+      "severity": "high"
+    },
+    {
+      "rule_id": "selected_quantile_upper_bound",
+      "metric": "selected_nomination_quantile",
+      "comparison": "<=",
+      "threshold": 0.9,
+      "action_on_failure": "clip_or_fallback_to_point",
+      "severity": "high"
+    },
+    {
+      "rule_id": "scenario_availability",
+      "metric": "required_scenario_quantiles_available",
+      "comparison": "==",
+      "threshold": 1.0,
+      "action_on_failure": "fallback_to_point_and_alert",
+      "severity": "critical"
+    },
+    {
+      "rule_id": "forecast_origin_integrity",
+      "metric": "forecast_origin_before_gate_closure",
+      "comparison": "==",
+      "threshold": 1.0,
+      "action_on_failure": "block_nomination_and_alert",
+      "severity": "critical"
+    }
+  ],
+  "fallback_hierarchy": [
+    {
+      "priority": 1,
+      "policy": "active_operating_mode_policy",
+      "condition": "all critical checks pass"
+    },
+    {
+      "priority": 2,
+      "policy": "same_panel_point_centre",
+      "condition": "active policy unavailable or monitoring gate fails"
+    },
+    {
+      "priority": 3,
+      "policy": "last_valid_point_centre",
+      "condition": "current point forecast unavailable; must carry stale-data flag"
+    },
+    {
+      "priority": 4,
+      "policy": "manual_trader_intervention",
+      "condition": "no validated automated nomination exists"
+    }
+  ]
+}

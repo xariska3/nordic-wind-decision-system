@@ -1,0 +1,7 @@
+panel,operating_mode,stress_cases,positive_stress_cases,minimum_stressed_delta_vs_conservative_eur,median_stressed_delta_vs_conservative_eur,maximum_stressed_delta_vs_conservative_eur,positive_stress_case_share
+d2,balanced,20,20,2619827.7149570286,8440839.419444684,14261851.123932347,1.0
+d2,conservative,20,0,0.0,0.0,0.0,0.0
+d2,profit_seeking,20,20,3072589.1188058183,11167908.355309185,19263227.59181256,1.0
+exact,balanced,20,20,735402.304615885,1894804.4401700795,3054206.575724274,1.0
+exact,conservative,20,0,0.0,0.0,0.0,0.0
+exact,profit_seeking,20,20,808921.9949925351,2488482.611684957,4168043.2283773776,1.0

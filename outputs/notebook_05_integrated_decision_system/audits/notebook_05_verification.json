@@ -1,0 +1,164 @@
+{
+  "verification_status": "INTEGRATED_DECISION_SYSTEM_COMPLETE",
+  "blocking_failures": [],
+  "input_manifest": {
+    "notebook_03_status": "PROBABILISTIC_MODELLING_COMPLETE",
+    "notebook_04_status": "COMMERCIAL_EVALUATION_COMPLETE",
+    "settlement_rows": 147168,
+    "settlement_sha256": "8831ba0347e3f25ae039da4153449b3db2c8272b2253b4f952f3d360a294b833",
+    "shortlist_rows": 24,
+    "commercial_contexts": 56
+  },
+  "fold_evidence": [
+    {
+      "panel": "d2",
+      "commercial_folds": 2,
+      "commercial_days": 180,
+      "commercial_hours": 4319,
+      "evidence_tier": "multi_fold_commercial_evidence",
+      "interpretation": "D2 contains multiple sequential probabilistic and commercial folds."
+    },
+    {
+      "panel": "exact",
+      "commercial_folds": 1,
+      "commercial_days": 40,
+      "commercial_hours": 937,
+      "evidence_tier": "single_fold_shadow_evidence",
+      "interpretation": "Notebook 02 exact fold 1 was used as Notebook 03 calibration history; exact fold 2 is the only leakage-safe scenario and commercial evaluation fold."
+    }
+  ],
+  "non_reference_production_eligible_policies": 0,
+  "non_reference_pilot_eligible_policies": 2,
+  "default_live_mode": "conservative",
+  "recommended_d2_pilot_mode": "balanced",
+  "exact_track_live_status": "shadow_only_until_second_probabilistic_commercial_fold",
+  "final_recommendations": [
+    {
+      "panel": "d2",
+      "operating_mode": "conservative",
+      "deployment_status": "production_baseline",
+      "commercial_delta_vs_conservative_eur": 0.0,
+      "commercial_delta_vs_conservative_eur_per_mwh": 0.0,
+      "area_absolute_imbalance_change_pct": 0.0,
+      "positive_stress_case_share": 0.0,
+      "recommended_use": "Default live benchmark and automatic fallback."
+    },
+    {
+      "panel": "d2",
+      "operating_mode": "balanced",
+      "deployment_status": "controlled_pilot",
+      "commercial_delta_vs_conservative_eur": 7130925.561966,
+      "commercial_delta_vs_conservative_eur_per_mwh": 0.645357,
+      "area_absolute_imbalance_change_pct": 22.586321,
+      "positive_stress_case_share": 1.0,
+      "recommended_use": "Shadow first, then limited-volume live pilot for DK1 while DK2 remains on the point forecast."
+    },
+    {
+      "panel": "d2",
+      "operating_mode": "profit_seeking",
+      "deployment_status": "limited_pilot_only",
+      "commercial_delta_vs_conservative_eur": 9631613.795906,
+      "commercial_delta_vs_conservative_eur_per_mwh": 0.871673,
+      "area_absolute_imbalance_change_pct": 41.636438,
+      "positive_stress_case_share": 1.0,
+      "recommended_use": "Capped-volume trader overlay with strict daily loss and imbalance limits."
+    },
+    {
+      "panel": "exact",
+      "operating_mode": "conservative",
+      "deployment_status": "shadow_baseline",
+      "commercial_delta_vs_conservative_eur": 0.0,
+      "commercial_delta_vs_conservative_eur_per_mwh": 0.0,
+      "area_absolute_imbalance_change_pct": 0.0,
+      "positive_stress_case_share": 0.0,
+      "recommended_use": "Run as a forecast-horizon benchmark; do not claim production superiority."
+    },
+    {
+      "panel": "exact",
+      "operating_mode": "balanced",
+      "deployment_status": "shadow_only",
+      "commercial_delta_vs_conservative_eur": 1527103.287862,
+      "commercial_delta_vs_conservative_eur_per_mwh": 1.081335,
+      "area_absolute_imbalance_change_pct": 3.746432,
+      "positive_stress_case_share": 1.0,
+      "recommended_use": "Record hypothetical nominations and P&L until a second independent exact fold exists."
+    },
+    {
+      "panel": "exact",
+      "operating_mode": "profit_seeking",
+      "deployment_status": "shadow_only",
+      "commercial_delta_vs_conservative_eur": 2084021.614189,
+      "commercial_delta_vs_conservative_eur_per_mwh": 1.475686,
+      "area_absolute_imbalance_change_pct": 31.022089,
+      "positive_stress_case_share": 1.0,
+      "recommended_use": "Research and trader-review overlay only."
+    }
+  ],
+  "saved_files": [
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\config\\operating_mode_policy_registry.csv",
+      "exists": true,
+      "size_mb": 0.001
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\config\\deployment_policy_registry.csv",
+      "exists": true,
+      "size_mb": 0.001
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\config\\deployment_config.json",
+      "exists": true,
+      "size_mb": 0.006
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\operating_mode_commercial_summary.csv",
+      "exists": true,
+      "size_mb": 0.002
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\operating_mode_daily_portfolio.parquet",
+      "exists": true,
+      "size_mb": 0.026
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\policy_promotion_gate_evaluation.csv",
+      "exists": true,
+      "size_mb": 0.004
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\approximate_evidence_horizon.csv",
+      "exists": true,
+      "size_mb": 0.004
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\operating_mode_fee_spread_sensitivity.csv",
+      "exists": true,
+      "size_mb": 0.011
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\operating_mode_stress_resilience.csv",
+      "exists": true,
+      "size_mb": 0.001
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\tables\\final_deployment_recommendation.csv",
+      "exists": true,
+      "size_mb": 0.002
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\monitoring\\monitoring_rules.csv",
+      "exists": true,
+      "size_mb": 0.001
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\monitoring\\fallback_hierarchy.csv",
+      "exists": true,
+      "size_mb": 0.0
+    },
+    {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_05_integrated_decision_system\\monitoring\\shadow_trading_promotion_plan.csv",
+      "exists": true,
+      "size_mb": 0.001
+    }
+  ]
+}

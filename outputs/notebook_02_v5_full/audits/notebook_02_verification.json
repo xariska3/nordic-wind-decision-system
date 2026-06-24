@@ -1,0 +1,91 @@
+{
+  "verification_status": "MODELLING_COMPLETE",
+  "run_mode": "FULL",
+  "search_mode": "FULL",
+  "output_run_name": "notebook_02_v5_full",
+  "blocking_failures": [],
+  "d2_shape": [
+    33648,
+    228
+  ],
+  "exact_shape": [
+    9458,
+    315
+  ],
+  "d2_folds": 3,
+  "exact_folds": 2,
+  "d2_fold_config": {
+    "min_train_days": 365,
+    "validation_days": 60,
+    "test_days": 90,
+    "step_days": 90
+  },
+  "exact_fold_config": {
+    "min_train_days": 90,
+    "validation_days": 21,
+    "test_days": 42,
+    "step_days": 42
+  },
+  "overlapping_test_keys": 0,
+  "manual_review_feature_count": 0,
+  "d2_used": true,
+  "exact_used": true,
+  "baseline_prediction_rows": 80928,
+  "all_test_prediction_rows": 360864,
+  "climatology_missing_predictions": 0,
+  "confirmatory_comparisons": 12,
+  "lightgbm_device_type": "gpu",
+  "lightgbm_gpu_platform_id": -1,
+  "lightgbm_gpu_device_id": -1,
+  "lightgbm_gpu_use_dp": false,
+  "lightgbm_max_bin": 63,
+  "algorithms": [
+    "provider_lightgbm",
+    "pooled_lightgbm",
+    "equal_weight",
+    "best_validation_expert",
+    "inverse_mae",
+    "dirichlet_mae",
+    "slsqp_mae",
+    "slsqp_mse",
+    "slsqp_mae_median_intercept",
+    "linear_stack",
+    "forecast_origin_safe_hedge",
+    "forecast_disagreement_regime_slsqp_mae",
+    "paired_common_support_evaluation",
+    "newey_west_inference",
+    "local_day_block_bootstrap"
+  ],
+  "input_manifest": {
+    "d2": {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\data\\processed\\wind_model_panel_d2_hourly.parquet",
+      "shape": [
+        33648,
+        228
+      ],
+      "sha256": "a43007b38e842a88b03ec5d4d96290b15343c3ce341a540f94320dfc0cd1a05a",
+      "first_timestamp_utc": "2024-07-04 22:00:00+00:00",
+      "last_timestamp_utc": "2026-06-05 21:00:00+00:00",
+      "price_areas": [
+        "DK1",
+        "DK2"
+      ],
+      "target_column": "actual_wind_mwh"
+    },
+    "exact": {
+      "path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\data\\processed\\wind_model_panel_exact_runs_hourly.parquet",
+      "shape": [
+        9458,
+        315
+      ],
+      "sha256": "d2bd69cd8d70b7c15f9038f2ab69a6267a07b7c8d94a5e0fee909049f78405b0",
+      "first_timestamp_utc": "2025-08-31 22:00:00+00:00",
+      "last_timestamp_utc": "2026-06-05 21:00:00+00:00",
+      "price_areas": [
+        "DK1",
+        "DK2"
+      ],
+      "target_column": "actual_wind_mwh"
+    }
+  }
+}

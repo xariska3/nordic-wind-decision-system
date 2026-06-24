@@ -1,0 +1,103 @@
+{
+  "verification_status": "PROBABILISTIC_MODELLING_COMPLETE",
+  "blocking_failures": [],
+  "input_manifest": {
+    "prediction_path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_02_v5_full\\predictions\\notebook_02_test_predictions.parquet",
+    "prediction_sha256": "48ca10cb88adc9ff6cdb1fabe501f97725e0e61949e710943b515001d1f74b9d",
+    "prediction_shape": [
+      360864,
+      11
+    ],
+    "notebook_02_verification_path": "C:\\Users\\chka24ac\\Nordic Wind Decision System\\outputs\\notebook_02_v5_full\\audits\\notebook_02_verification.json",
+    "notebook_02_verification_status": "MODELLING_COMPLETE",
+    "notebook_02_d2_folds": 3,
+    "notebook_02_exact_folds": 2
+  },
+  "dropped_missing_prediction_rows": 8996,
+  "models_with_missing_predictions": 16,
+  "candidate_centres": {
+    "d2/DK1": [
+      "ensemble::linear_stack",
+      "ensemble::hedge",
+      "pooled_lightgbm"
+    ],
+    "d2/DK2": [
+      "pooled_lightgbm",
+      "ensemble::equal_weight",
+      "ensemble::hedge"
+    ],
+    "exact/DK1": [
+      "ensemble::hedge",
+      "ensemble::dirichlet_mae",
+      "pooled_lightgbm"
+    ],
+    "exact/DK2": [
+      "ensemble::hedge",
+      "ensemble::inverse_mae",
+      "pooled_lightgbm",
+      "ensemble::equal_weight"
+    ]
+  },
+  "primary_centres": {
+    "d2/DK1": "ensemble::linear_stack",
+    "d2/DK2": "pooled_lightgbm",
+    "exact/DK1": "ensemble::hedge",
+    "exact/DK2": "ensemble::hedge"
+  },
+  "calibration_tasks": 19,
+  "probabilistic_prediction_rows": 766948,
+  "probabilistic_methods": [
+    "conformal_quantile_gbdt",
+    "empirical_conditional",
+    "empirical_global",
+    "quantile_gbdt"
+  ],
+  "quantile_levels": [
+    0.05,
+    0.1,
+    0.25,
+    0.5,
+    0.75,
+    0.9,
+    0.95
+  ],
+  "probabilistic_panel_area_pairs": [
+    [
+      "d2",
+      "DK1"
+    ],
+    [
+      "d2",
+      "DK2"
+    ],
+    [
+      "exact",
+      "DK1"
+    ],
+    [
+      "exact",
+      "DK2"
+    ]
+  ],
+  "scenario_generation_enabled": true,
+  "scenario_count_per_timestamp": 250,
+  "joint_scenario_rows": 2663500,
+  "scenario_panel_area_pairs": [
+    [
+      "d2",
+      "DK1"
+    ],
+    [
+      "d2",
+      "DK2"
+    ],
+    [
+      "exact",
+      "DK1"
+    ],
+    [
+      "exact",
+      "DK2"
+    ]
+  ]
+}
